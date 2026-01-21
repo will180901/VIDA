@@ -1,0 +1,54 @@
+[
+  {
+    "model": "content_management.whyvidareason",
+    "pk": 1,
+    "fields": {
+      "title": "Compétence",
+      "description": "Ophtalmologues expérimentés et personnel formé pour vous offrir des soins de qualité",
+      "icon_name": "BadgeCheck",
+      "order": 1,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.whyvidareason",
+    "pk": 2,
+    "fields": {
+      "title": "Équipement Moderne",
+      "description": "Matériel adapté pour des examens fiables et un diagnostic précis",
+      "icon_name": "Stethoscope",
+      "order": 2,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.whyvidareason",
+    "pk": 3,
+    "fields": {
+      "title": "À Votre Écoute",
+      "description": "Chaque patient est unique. Nous prenons le temps de comprendre vos besoins",
+      "icon_name": "Ear",
+      "order": 3,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.whyvidareason",
+    "pk": 4,
+    "fields": {
+      "title": "Facilité d'Accès",
+      "description": "Réservation en ligne, par téléphone ou WhatsApp. Horaires du lundi au samedi",
+      "icon_name": "Smartphone",
+      "order": 4,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  }
+]

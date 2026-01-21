@@ -1,0 +1,93 @@
+[
+  {
+    "model": "content_management.clinicschedule",
+    "pk": 1,
+    "fields": {
+      "day_of_week": 0,
+      "is_open": true,
+      "morning_start": "08:30:00",
+      "morning_end": "12:30:00",
+      "afternoon_start": "14:00:00",
+      "afternoon_end": "17:00:00",
+      "slot_duration": 30
+    }
+  },
+  {
+    "model": "content_management.clinicschedule",
+    "pk": 2,
+    "fields": {
+      "day_of_week": 1,
+      "is_open": true,
+      "morning_start": "08:30:00",
+      "morning_end": "12:30:00",
+      "afternoon_start": "14:00:00",
+      "afternoon_end": "17:00:00",
+      "slot_duration": 30
+    }
+  },
+  {
+    "model": "content_management.clinicschedule",
+    "pk": 3,
+    "fields": {
+      "day_of_week": 2,
+      "is_open": true,
+      "morning_start": "08:30:00",
+      "morning_end": "12:30:00",
+      "afternoon_start": "14:00:00",
+      "afternoon_end": "17:00:00",
+      "slot_duration": 30
+    }
+  },
+  {
+    "model": "content_management.clinicschedule",
+    "pk": 4,
+    "fields": {
+      "day_of_week": 3,
+      "is_open": true,
+      "morning_start": "08:30:00",
+      "morning_end": "12:30:00",
+      "afternoon_start": "14:00:00",
+      "afternoon_end": "17:00:00",
+      "slot_duration": 30
+    }
+  },
+  {
+    "model": "content_management.clinicschedule",
+    "pk": 5,
+    "fields": {
+      "day_of_week": 4,
+      "is_open": true,
+      "morning_start": "08:30:00",
+      "morning_end": "12:30:00",
+      "afternoon_start": "14:00:00",
+      "afternoon_end": "17:00:00",
+      "slot_duration": 30
+    }
+  },
+  {
+    "model": "content_management.clinicschedule",
+    "pk": 6,
+    "fields": {
+      "day_of_week": 5,
+      "is_open": true,
+      "morning_start": "08:00:00",
+      "morning_end": "12:30:00",
+      "afternoon_start": null,
+      "afternoon_end": null,
+      "slot_duration": 30
+    }
+  },
+  {
+    "model": "content_management.clinicschedule",
+    "pk": 7,
+    "fields": {
+      "day_of_week": 6,
+      "is_open": false,
+      "morning_start": null,
+      "morning_end": null,
+      "afternoon_start": null,
+      "afternoon_end": null,
+      "slot_duration": 30
+    }
+  }
+]

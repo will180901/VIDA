@@ -1,0 +1,58 @@
+{% extends "emails/base.html" %}
+
+{% block title %}Rappel de rendez-vous - VIDA{% endblock %}
+
+{% block content %}
+<h2 style="color: #10b981; margin-top: 0;">⏰ Rappel : Rendez-vous demain</h2>
+
+<p>Bonjour <strong>{{ appointment.patient_first_name }} {{ appointment.patient_last_name }}</strong>,</p>
+
+<p>Nous vous rappelons que vous avez un rendez-vous demain au Centre Médical VIDA.</p>
+
+<div class="info-box">
+    <p style="margin: 0;"><strong>📅 Votre rendez-vous</strong></p>
+    <table style="width: 100%; margin-top: 10px;">
+        <tr>
+            <td style="padding: 5px 0;"><strong>Date :</strong></td>
+            <td>{{ appointment.date|date:"l d F Y" }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 0;"><strong>Heure :</strong></td>
+            <td style="font-size: 18px; color: #10b981;"><strong>{{ appointment.time|time:"H:i" }}</strong></td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 0;"><strong>Type :</strong></td>
+            <td>{{ appointment.get_consultation_type_display }}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="warning-box">
+    <p style="margin: 0;"><strong>✅ À ne pas oublier</strong></p>
+    <p style="margin: 5px 0 0 0;">
+        • Arrivez 10 minutes avant l'heure<br>
+        • Carte d'identité<br>
+        • Carnet de santé<br>
+        • Ordonnances et résultats d'examens récents
+    </p>
+</div>
+
+<h3 style="color: #10b981;">📍 Adresse</h3>
+<p>
+    <strong>Centre Médical VIDA</strong><br>
+    08 Bis rue Mboko, Moungali<br>
+    Brazzaville, Congo
+</p>
+
+<h3 style="color: #10b981;">📞 Besoin d'annuler ou reporter ?</h3>
+<p>
+    Contactez-nous au plus vite :<br>
+    Téléphone : 06 569 12 35 | 05 745 36 88<br>
+    WhatsApp : +242 06 693 47 35
+</p>
+
+<p>À demain !</p>
+
+<p>Cordialement,<br>
+<strong>L'équipe VIDA</strong></p>
+{% endblock %}

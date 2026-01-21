@@ -1,0 +1,63 @@
+{% extends "emails/base.html" %}
+
+{% block title %}Confirmation de rendez-vous - VIDA{% endblock %}
+
+{% block content %}
+<h2 style="color: #10b981; margin-top: 0;">✅ Rendez-vous confirmé</h2>
+
+<p>Bonjour <strong>{{ appointment.patient_first_name }} {{ appointment.patient_last_name }}</strong>,</p>
+
+<p>Votre rendez-vous a été enregistré avec succès. Voici les détails :</p>
+
+<div class="info-box">
+    <p style="margin: 0;"><strong>📅 Détails du rendez-vous</strong></p>
+    <table style="width: 100%; margin-top: 10px;">
+        <tr>
+            <td style="padding: 5px 0;"><strong>Date :</strong></td>
+            <td>{{ appointment.date|date:"l d F Y" }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 0;"><strong>Heure :</strong></td>
+            <td>{{ appointment.time|time:"H:i" }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 0;"><strong>Type :</strong></td>
+            <td>{{ appointment.get_consultation_type_display }}</td>
+        </tr>
+        {% if appointment.reason %}
+        <tr>
+            <td style="padding: 5px 0;"><strong>Motif :</strong></td>
+            <td>{{ appointment.reason }}</td>
+        </tr>
+        {% endif %}
+    </table>
+</div>
+
+<div class="warning-box">
+    <p style="margin: 0;"><strong>⏰ Important</strong></p>
+    <p style="margin: 5px 0 0 0;">
+        • Merci d'arriver 10 minutes avant l'heure du rendez-vous<br>
+        • Apportez votre carte d'identité et votre carnet de santé<br>
+        • En cas d'empêchement, annulez au moins 24h à l'avance
+    </p>
+</div>
+
+<h3 style="color: #10b981;">📍 Adresse</h3>
+<p>
+    <strong>Centre Médical VIDA</strong><br>
+    08 Bis rue Mboko, Moungali<br>
+    Brazzaville, Congo
+</p>
+
+<h3 style="color: #10b981;">📞 Contact</h3>
+<p>
+    Téléphone : 06 569 12 35 | 05 745 36 88<br>
+    WhatsApp : +242 06 693 47 35<br>
+    Email : centremedvida@gmail.com
+</p>
+
+<p>Nous vous attendons avec plaisir !</p>
+
+<p>Cordialement,<br>
+<strong>L'équipe VIDA</strong></p>
+{% endblock %}

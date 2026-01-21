@@ -1,0 +1,171 @@
+# ============================================
+# GIT ATTRIBUTES - VIDA
+# ============================================
+# Configure Git line ending handling
+# https://git-scm.com/docs/gitattributes
+
+# ============================================
+# AUTO DETECT
+# ============================================
+# Let Git auto-detect text files and normalize line endings
+* text=auto
+
+# ============================================
+# TEXT FILES (LF in repo, CRLF on Windows checkout)
+# ============================================
+
+# Source code
+*.py text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.sass text eol=lf
+*.less text eol=lf
+*.html text eol=lf
+*.htm text eol=lf
+*.xml text eol=lf
+*.svg text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.ini text eol=lf
+*.cfg text eol=lf
+*.conf text eol=lf
+
+# Documentation
+*.md text eol=lf
+*.txt text eol=lf
+*.rst text eol=lf
+*.adoc text eol=lf
+
+# Config files
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.editorconfig text eol=lf
+.env.example text eol=lf
+*.env text eol=lf
+Dockerfile text eol=lf
+docker-compose*.yml text eol=lf
+Makefile text eol=lf
+*.mk text eol=lf
+
+# Shell scripts (always LF, even on Windows)
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+
+# Windows scripts (always CRLF)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# ============================================
+# BINARY FILES (no line ending conversion)
+# ============================================
+
+# Images
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.avif binary
+*.svg binary
+*.bmp binary
+*.tiff binary
+
+# Fonts
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
+
+# Videos
+*.mp4 binary
+*.mov binary
+*.avi binary
+*.mkv binary
+*.webm binary
+
+# Audio
+*.mp3 binary
+*.wav binary
+*.ogg binary
+*.flac binary
+
+# Archives
+*.zip binary
+*.tar binary
+*.gz binary
+*.bz2 binary
+*.7z binary
+*.rar binary
+
+# Documents
+*.pdf binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+*.ppt binary
+*.pptx binary
+
+# Databases
+*.db binary
+*.sqlite binary
+*.sqlite3 binary
+
+# Other binary
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+*.pyc binary
+*.pyo binary
+*.class binary
+
+# ============================================
+# SPECIAL HANDLING
+# ============================================
+
+# Lock files (don't diff)
+package-lock.json -diff
+pnpm-lock.yaml -diff
+yarn.lock -diff
+poetry.lock -diff
+Pipfile.lock -diff
+
+# Minified files (don't diff)
+*.min.js -diff
+*.min.css -diff
+
+# Generated files (don't diff)
+*.map -diff
+*.d.ts -diff
+
+# ============================================
+# LINGUIST (GitHub language detection)
+# ============================================
+
+# Exclude from language statistics
+backend/staticfiles/* linguist-vendored
+frontend/node_modules/* linguist-vendored
+*.min.js linguist-generated
+*.min.css linguist-generated
+*.map linguist-generated
+
+# Mark as documentation
+docs/* linguist-documentation
+*.md linguist-documentation
+
+# Override language detection
+*.tsx linguist-language=TypeScript
+*.jsx linguist-language=JavaScript

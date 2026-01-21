@@ -1,0 +1,45 @@
+{% extends "emails/base.html" %}
+
+{% block title %}Bienvenue sur VIDA{% endblock %}
+
+{% block content %}
+<h2 style="color: #10b981; margin-top: 0;">🎉 Votre compte est activé !</h2>
+
+<p>Bonjour <strong>{{ user.first_name }} {{ user.last_name }}</strong>,</p>
+
+<p>Félicitations ! Votre adresse email a été vérifiée avec succès. Vous pouvez maintenant profiter de tous les services de VIDA :</p>
+
+<div class="info-box">
+    <p style="margin: 0;"><strong>✨ Ce que vous pouvez faire :</strong></p>
+    <ul style="margin: 10px 0 0 0; padding-left: 20px;">
+        <li>Prendre rendez-vous en ligne 24h/24</li>
+        <li>Consulter vos rendez-vous passés et à venir</li>
+        <li>Gérer votre profil médical</li>
+        <li>Recevoir des rappels automatiques</li>
+    </ul>
+</div>
+
+<div style="text-align: center;">
+    <a href="{{ login_url }}" class="button">Se connecter</a>
+</div>
+
+<h3 style="color: #10b981;">📍 Nos coordonnées</h3>
+<p>
+    <strong>Adresse :</strong> 08 Bis rue Mboko, Moungali, Brazzaville<br>
+    <strong>Téléphone :</strong> 06 569 12 35 | 05 745 36 88<br>
+    <strong>WhatsApp :</strong> +242 06 693 47 35<br>
+    <strong>Email :</strong> centremedvida@gmail.com
+</p>
+
+<h3 style="color: #10b981;">🕐 Horaires d'ouverture</h3>
+<p>
+    <strong>Lundi - Vendredi :</strong> 8h00 - 18h00<br>
+    <strong>Samedi :</strong> 8h00 - 13h00<br>
+    <strong>Dimanche :</strong> Fermé
+</p>
+
+<p>Nous sommes ravis de vous compter parmi nos patients !</p>
+
+<p>À très bientôt,<br>
+<strong>L'équipe VIDA</strong></p>
+{% endblock %}

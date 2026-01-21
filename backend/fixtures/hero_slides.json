@@ -1,0 +1,54 @@
+[
+  {
+    "model": "content_management.heroslide",
+    "pk": 1,
+    "fields": {
+      "title": "Votre Vue Mérite une Attention Sérieuse",
+      "subtitle": "Centre ophtalmologique moderne à Brazzaville. Équipement professionnel, soins de qualité.",
+      "image": "hero/hero-1-vision.jpg",
+      "order": 1,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.heroslide",
+    "pk": 2,
+    "fields": {
+      "title": "Examens Complets et Diagnostics Précis",
+      "subtitle": "Dépistage des maladies oculaires. Équipements adaptés pour des résultats fiables.",
+      "image": "hero/hero-2-technology.png",
+      "order": 2,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.heroslide",
+    "pk": 3,
+    "fields": {
+      "title": "Une Équipe à Votre Écoute",
+      "subtitle": "Ophtalmologues qualifiés et personnel attentionné. Nous prenons le temps de vous expliquer.",
+      "image": "hero/hero-3-team.png",
+      "order": 3,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.heroslide",
+    "pk": 4,
+    "fields": {
+      "title": "Prenez Rendez-vous Facilement",
+      "subtitle": "En ligne, par téléphone ou WhatsApp. Nous sommes là pour vous accompagner.",
+      "image": "hero/hero-4-appointment.png",
+      "order": 4,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  }
+]

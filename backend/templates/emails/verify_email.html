@@ -1,0 +1,31 @@
+{% extends "emails/base.html" %}
+
+{% block title %}Vérifiez votre email - VIDA{% endblock %}
+
+{% block content %}
+<h2 style="color: #10b981; margin-top: 0;">Bienvenue sur VIDA !</h2>
+
+<p>Bonjour <strong>{{ user.first_name }} {{ user.last_name }}</strong>,</p>
+
+<p>Merci de vous être inscrit sur notre plateforme. Pour activer votre compte et commencer à prendre rendez-vous, veuillez vérifier votre adresse email en cliquant sur le bouton ci-dessous :</p>
+
+<div style="text-align: center;">
+    <a href="{{ verification_url }}" class="button">Vérifier mon email</a>
+</div>
+
+<div class="info-box">
+    <p style="margin: 0;"><strong>💡 Pourquoi vérifier mon email ?</strong></p>
+    <p style="margin: 5px 0 0 0;">La vérification nous permet de sécuriser votre compte et de vous envoyer des notifications importantes concernant vos rendez-vous.</p>
+</div>
+
+<p>Si le bouton ne fonctionne pas, copiez et collez ce lien dans votre navigateur :</p>
+<p style="word-break: break-all; color: #6b7280; font-size: 14px;">{{ verification_url }}</p>
+
+<div class="warning-box">
+    <p style="margin: 0;"><strong>⚠️ Important</strong></p>
+    <p style="margin: 5px 0 0 0;">Ce lien est valable pendant 24 heures. Si vous n'avez pas créé de compte sur VIDA, vous pouvez ignorer cet email.</p>
+</div>
+
+<p>À bientôt,<br>
+<strong>L'équipe VIDA</strong></p>
+{% endblock %}
