@@ -1,0 +1,62 @@
+[
+  {
+    "model": "content_management.medicalservice",
+    "pk": 1,
+    "fields": {
+      "title": "Consultations",
+      "description": "Examens de vue complets, dépistage glaucome et cataracte",
+      "details": "Nos ophtalmologues réalisent des examens complets de la vue incluant le dépistage du glaucome, de la cataracte et d'autres pathologies oculaires. Consultation sur rendez-vous du lundi au samedi.",
+      "image": "services/consultation.png",
+      "icon_name": "stethoscope",
+      "order": 1,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.medicalservice",
+    "pk": 2,
+    "fields": {
+      "title": "Dépistage",
+      "description": "Détection précoce des maladies oculaires (diabète, DMLA)",
+      "details": "Dépistage précoce des maladies oculaires liées au diabète, à l'hypertension et à l'âge (DMLA). Un diagnostic précoce permet une meilleure prise en charge.",
+      "image": "services/depistage.png",
+      "icon_name": "search",
+      "order": 2,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.medicalservice",
+    "pk": 3,
+    "fields": {
+      "title": "Lunetterie",
+      "description": "Large choix de montures et verres correcteurs adaptés",
+      "details": "Notre lunetterie propose un large choix de montures de qualité et de verres correcteurs adaptés à vos besoins. Conseils personnalisés pour trouver la monture qui vous convient.",
+      "image": "services/lunetterie.png",
+      "icon_name": "glasses",
+      "order": 3,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.medicalservice",
+    "pk": 4,
+    "fields": {
+      "title": "Chirurgie",
+      "description": "Chirurgie réfractive au laser (myopie, astigmatisme)",
+      "details": "Chirurgie réfractive au laser pour corriger la myopie, l'hypermétropie et l'astigmatisme. Intervention rapide et indolore avec suivi post-opératoire complet.",
+      "image": "services/chirurgie.png",
+      "icon_name": "activity",
+      "order": 4,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  }
+]

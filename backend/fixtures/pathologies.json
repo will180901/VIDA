@@ -1,0 +1,167 @@
+[
+  {
+    "model": "users.pathology",
+    "pk": "11111111-1111-1111-1111-111111111111",
+    "fields": {
+      "code_cim10": "H11.0",
+      "name": "Ptérygion",
+      "category": "cornea",
+      "description": "Croissance anormale du tissu conjonctival sur la cornée",
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.pathology",
+    "pk": "22222222-2222-2222-2222-222222222222",
+    "fields": {
+      "code_cim10": "H16.0",
+      "name": "Kératite ulcéreuse",
+      "category": "cornea",
+      "description": "Inflammation de la cornée avec ulcération",
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.pathology",
+    "pk": "33333333-3333-3333-3333-333333333333",
+    "fields": {
+      "code_cim10": "H25.0",
+      "name": "Cataracte sénile",
+      "category": "lens",
+      "description": "Opacification du cristallin liée au vieillissement",
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.pathology",
+    "pk": "44444444-4444-4444-4444-444444444444",
+    "fields": {
+      "code_cim10": "H25.1",
+      "name": "Cataracte sénile, nuclear",
+      "category": "lens",
+      "description": "Opacification du noyau du cristallin",
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.pathology",
+    "pk": "55555555-5555-5555-5555-555555555555",
+    "fields": {
+      "code_cim10": "H26.0",
+      "name": "Cataracte diabétique",
+      "category": "lens",
+      "description": "Opacification du cristallin due au diabète",
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.pathology",
+    "pk": "66666666-6666-6666-6666-666666666666",
+    "fields": {
+      "code_cim10": "H20.0",
+      "name": "Uvéite antérieure aiguë",
+      "category": "uvea",
+      "description": "Inflammation de l'uvée antérieure",
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.pathology",
+    "pk": "77777777-7777-7777-7777-777777777777",
+    "fields": {
+      "code_cim10": "H40.0",
+      "name": "Glaucome à angle ouvert",
+      "category": "glaucoma",
+      "description": "Augmentation de la pression intraoculaire avec angle iridocornéen ouvert",
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.pathology",
+    "pk": "88888888-8888-8888-8888-888888888888",
+    "fields": {
+      "code_cim10": "H40.1",
+      "name": "Glaucome à angle fermé",
+      "category": "glaucoma",
+      "description": "Blocage de l'écoulement de l'humeur aqueuse",
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.pathology",
+    "pk": "99999999-9999-9999-9999-999999999999",
+    "fields": {
+      "code_cim10": "H35.0",
+      "name": "Rétinopathie diabétique",
+      "category": "retina",
+      "description": "Atteinte rétinienne due au diabète",
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.pathology",
+    "pk": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+    "fields": {
+      "code_cim10": "H33.0",
+      "name": "Décollement de rétine",
+      "category": "retina",
+      "description": "Séparation de la rétine de sa couche sous-jacente",
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.pathology",
+    "pk": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+    "fields": {
+      "code_cim10": "H34.2",
+      "name": "Occlusion de l'artère centrale de la rétine",
+      "category": "retina",
+      "description": "Blocage de l'artère alimentant la rétine",
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.pathology",
+    "pk": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+    "fields": {
+      "code_cim10": "H47.0",
+      "name": "Névrite optique",
+      "category": "optic_nerve",
+      "description": "Inflammation du nerf optique",
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.pathology",
+    "pk": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+    "fields": {
+      "code_cim10": "H50.0",
+      "name": "Strabisme convergent",
+      "category": "refraction",
+      "description": "Déviation des yeux vers l'intérieur",
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.pathology",
+    "pk": "eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee",
+    "fields": {
+      "code_cim10": "H52.1",
+      "name": "Myopie",
+      "category": "refraction",
+      "description": " Trouble de la vision de loin",
+      "is_active": true
+    }
+  },
+  {
+    "model": "users.pathology",
+    "pk": "ffffffff-ffff-ffff-ffff-ffffffffffff",
+    "fields": {
+      "code_cim10": "H53.0",
+      "name": "Amblyopie",
+      "category": "amblyopia",
+      "description": "Baisse de l'acuité visuelle d'un œil sans lésion apparente",
+      "is_active": true
+    }
+  }
+]

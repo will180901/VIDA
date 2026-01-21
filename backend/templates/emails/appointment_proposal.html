@@ -1,0 +1,73 @@
+{% extends "emails/base.html" %}
+
+{% block title %}Proposition de rendez-vous - VIDA{% endblock %}
+
+{% block content %}
+<h2 style="color: #f59e0b; margin-top: 0;">🔄 Proposition de rendez-vous</h2>
+
+<p>Bonjour <strong>{{ appointment.patient_first_name }} {{ appointment.patient_last_name }}</strong>,</p>
+
+<p>Nous avons bien reçu votre demande de rendez-vous. Malheureusement, le créneau demandé n'est plus disponible.</p>
+
+<p>Nous vous proposons un créneau alternatif :</p>
+
+<div style="display: flex; gap: 20px; margin: 30px 0;">
+    <div style="flex: 1; background-color: #fef3c7; padding: 20px; border-radius: 8px; text-align: center;">
+        <p style="margin: 0; color: #92400e; font-size: 14px;">Votre demande</p>
+        <p style="margin: 10px 0 0 0; font-size: 18px; font-weight: bold; color: #78350f;">
+            {{ appointment.date|date:"d/m/Y" }}<br>
+            {{ appointment.time|time:"H:i" }}
+        </p>
+    </div>
+    
+    <div style="flex: 0 0 40px; display: flex; align-items: center; justify-content: center;">
+        <span style="font-size: 24px;">→</span>
+    </div>
+    
+    <div style="flex: 1; background-color: #d1fae5; padding: 20px; border-radius: 8px; text-align: center;">
+        <p style="margin: 0; color: #065f46; font-size: 14px;">Notre proposition</p>
+        <p style="margin: 10px 0 0 0; font-size: 18px; font-weight: bold; color: #047857;">
+            {{ appointment.proposed_date|date:"d/m/Y" }}<br>
+            {{ appointment.proposed_time|time:"H:i" }}
+        </p>
+    </div>
+</div>
+
+<div class="info-box">
+    <p style="margin: 0;"><strong>📋 Détails de la proposition</strong></p>
+    <table style="width: 100%; margin-top: 10px;">
+        <tr>
+            <td style="padding: 5px 0;"><strong>Date :</strong></td>
+            <td>{{ appointment.proposed_date|date:"l d F Y" }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 0;"><strong>Heure :</strong></td>
+            <td>{{ appointment.proposed_time|time:"H:i" }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 0;"><strong>Type :</strong></td>
+            <td>{{ appointment.get_consultation_type_display }}</td>
+        </tr>
+    </table>
+</div>
+
+{% if appointment.admin_message %}
+<div class="warning-box">
+    <p style="margin: 0;"><strong>💬 Message de la clinique</strong></p>
+    <p style="margin: 5px 0 0 0;">{{ appointment.admin_message }}</p>
+</div>
+{% endif %}
+
+<div style="text-align: center; margin: 30px 0;">
+    <a href="{{ frontend_url }}/patient/appointments/{{ appointment.id }}" class="button">
+        Voir et répondre à la proposition
+    </a>
+</div>
+
+<p style="font-size: 14px; color: #6b7280;">
+    Vous pouvez accepter cette proposition, la refuser, ou proposer une autre date qui vous convient mieux.
+</p>
+
+<p>Cordialement,<br>
+<strong>L'équipe VIDA</strong></p>
+{% endblock %}

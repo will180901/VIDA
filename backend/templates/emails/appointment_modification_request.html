@@ -1,0 +1,75 @@
+{% extends "emails/base.html" %}
+
+{% block title %}Demande de modification de rendez-vous - VIDA{% endblock %}
+
+{% block content %}
+<h2 style="color: #f59e0b; margin-top: 0;">📝 Demande de modification</h2>
+
+<p>Bonjour,</p>
+
+<p>Le patient <strong>{{ appointment.patient_first_name }} {{ appointment.patient_last_name }}</strong> souhaite modifier son rendez-vous confirmé.</p>
+
+<div style="display: flex; gap: 20px; margin: 30px 0;">
+    <div style="flex: 1; background-color: #fef3c7; padding: 20px; border-radius: 8px; text-align: center;">
+        <p style="margin: 0; color: #92400e; font-size: 14px;">RDV actuel</p>
+        <p style="margin: 10px 0 0 0; font-size: 18px; font-weight: bold; color: #78350f;">
+            {{ appointment.date|date:"d/m/Y" }}<br>
+            {{ appointment.time|time:"H:i" }}
+        </p>
+    </div>
+    
+    <div style="flex: 0 0 40px; display: flex; align-items: center; justify-content: center;">
+        <span style="font-size: 24px;">→</span>
+    </div>
+    
+    <div style="flex: 1; background-color: #dbeafe; padding: 20px; border-radius: 8px; text-align: center;">
+        <p style="margin: 0; color: #1e3a8a; font-size: 14px;">Nouvelle date souhaitée</p>
+        <p style="margin: 10px 0 0 0; font-size: 18px; font-weight: bold; color: #1e40af;">
+            {{ appointment.proposed_date|date:"d/m/Y" }}<br>
+            {{ appointment.proposed_time|time:"H:i" }}
+        </p>
+    </div>
+</div>
+
+<div class="info-box">
+    <p style="margin: 0;"><strong>👤 Informations patient</strong></p>
+    <table style="width: 100%; margin-top: 10px;">
+        <tr>
+            <td style="padding: 5px 0;"><strong>Nom :</strong></td>
+            <td>{{ appointment.patient_first_name }} {{ appointment.patient_last_name }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 0;"><strong>Email :</strong></td>
+            <td>{{ appointment.patient_email }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 0;"><strong>Téléphone :</strong></td>
+            <td>{{ appointment.patient_phone }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 0;"><strong>Type :</strong></td>
+            <td>{{ appointment.get_consultation_type_display }}</td>
+        </tr>
+    </table>
+</div>
+
+{% if appointment.patient_message %}
+<div class="warning-box">
+    <p style="margin: 0;"><strong>💬 Raison de la modification</strong></p>
+    <p style="margin: 5px 0 0 0;">{{ appointment.patient_message }}</p>
+</div>
+{% endif %}
+
+<div style="text-align: center; margin: 30px 0;">
+    <a href="{{ admin_url }}/admin/appointments" class="button">
+        Traiter la demande
+    </a>
+</div>
+
+<p style="font-size: 14px; color: #6b7280;">
+    Veuillez accepter ou refuser cette demande de modification dans le dashboard admin.
+</p>
+
+<p>Cordialement,<br>
+<strong>Système VIDA</strong></p>
+{% endblock %}

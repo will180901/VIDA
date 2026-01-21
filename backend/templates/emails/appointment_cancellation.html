@@ -1,0 +1,50 @@
+{% extends "emails/base.html" %}
+
+{% block title %}Annulation de rendez-vous - VIDA{% endblock %}
+
+{% block content %}
+<h2 style="color: #f59e0b; margin-top: 0;">❌ Rendez-vous annulé</h2>
+
+<p>Bonjour <strong>{{ appointment.patient_first_name }} {{ appointment.patient_last_name }}</strong>,</p>
+
+<p>Votre rendez-vous a été annulé.</p>
+
+<div class="warning-box">
+    <p style="margin: 0;"><strong>📅 Rendez-vous annulé</strong></p>
+    <table style="width: 100%; margin-top: 10px;">
+        <tr>
+            <td style="padding: 5px 0;"><strong>Date :</strong></td>
+            <td>{{ appointment.date|date:"l d F Y" }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 0;"><strong>Heure :</strong></td>
+            <td>{{ appointment.time|time:"H:i" }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 0;"><strong>Type :</strong></td>
+            <td>{{ appointment.get_consultation_type_display }}</td>
+        </tr>
+        {% if reason %}
+        <tr>
+            <td style="padding: 5px 0;"><strong>Raison :</strong></td>
+            <td>{{ reason }}</td>
+        </tr>
+        {% endif %}
+    </table>
+</div>
+
+<div class="info-box">
+    <p style="margin: 0;"><strong>💡 Prendre un nouveau rendez-vous</strong></p>
+    <p style="margin: 5px 0 0 0;">
+        Vous pouvez prendre un nouveau rendez-vous à tout moment :<br>
+        • En ligne sur notre site web<br>
+        • Par téléphone : 06 569 12 35 | 05 745 36 88<br>
+        • Par WhatsApp : +242 06 693 47 35
+    </p>
+</div>
+
+<p>Nous espérons vous revoir bientôt.</p>
+
+<p>Cordialement,<br>
+<strong>L'équipe VIDA</strong></p>
+{% endblock %}

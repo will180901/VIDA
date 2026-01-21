@@ -1,0 +1,66 @@
+{% extends "emails/base.html" %}
+
+{% block title %}Proposition refusée par le patient - VIDA{% endblock %}
+
+{% block content %}
+<h2 style="color: #ef4444; margin-top: 0;">❌ Proposition refusée</h2>
+
+<p>Bonjour,</p>
+
+<p>Le patient <strong>{{ appointment.patient_first_name }} {{ appointment.patient_last_name }}</strong> a refusé la proposition de rendez-vous.</p>
+
+<div style="background-color: #fee2e2; padding: 20px; border-radius: 8px; margin: 20px 0;">
+    <p style="margin: 0; color: #991b1b; font-size: 14px;"><strong>Proposition refusée</strong></p>
+    <p style="margin: 10px 0 0 0; font-size: 16px; color: #7f1d1d;">
+        {{ appointment.proposed_date|date:"l d F Y" }} à {{ appointment.proposed_time|time:"H:i" }}
+    </p>
+</div>
+
+<div class="info-box">
+    <p style="margin: 0;"><strong>👤 Informations patient</strong></p>
+    <table style="width: 100%; margin-top: 10px;">
+        <tr>
+            <td style="padding: 5px 0;"><strong>Nom :</strong></td>
+            <td>{{ appointment.patient_first_name }} {{ appointment.patient_last_name }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 0;"><strong>Email :</strong></td>
+            <td>{{ appointment.patient_email }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 0;"><strong>Téléphone :</strong></td>
+            <td>{{ appointment.patient_phone }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px 0;"><strong>Type :</strong></td>
+            <td>{{ appointment.get_consultation_type_display }}</td>
+        </tr>
+        {% if appointment.reason %}
+        <tr>
+            <td style="padding: 5px 0;"><strong>Motif :</strong></td>
+            <td>{{ appointment.reason }}</td>
+        </tr>
+        {% endif %}
+    </table>
+</div>
+
+{% if appointment.patient_message %}
+<div class="warning-box">
+    <p style="margin: 0;"><strong>💬 Message du patient</strong></p>
+    <p style="margin: 5px 0 0 0;">{{ appointment.patient_message }}</p>
+</div>
+{% endif %}
+
+<div style="text-align: center; margin: 30px 0;">
+    <a href="{{ admin_url }}/admin/appointments" class="button">
+        Voir dans le dashboard
+    </a>
+</div>
+
+<p style="font-size: 14px; color: #6b7280;">
+    Vous pouvez contacter le patient pour proposer une autre date ou clôturer la demande.
+</p>
+
+<p>Cordialement,<br>
+<strong>Système VIDA</strong></p>
+{% endblock %}

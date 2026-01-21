@@ -1,0 +1,74 @@
+[
+  {
+    "model": "content_management.sociallink",
+    "pk": 1,
+    "fields": {
+      "platform": "whatsapp",
+      "url": "https://wa.me/242066934735",
+      "order": 1,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.sociallink",
+    "pk": 2,
+    "fields": {
+      "platform": "facebook",
+      "url": "#",
+      "order": 2,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.sociallink",
+    "pk": 3,
+    "fields": {
+      "platform": "instagram",
+      "url": "#",
+      "order": 3,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.sociallink",
+    "pk": 4,
+    "fields": {
+      "platform": "tiktok",
+      "url": "#",
+      "order": 4,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.sociallink",
+    "pk": 5,
+    "fields": {
+      "platform": "linkedin",
+      "url": "#",
+      "order": 5,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.sociallink",
+    "pk": 6,
+    "fields": {
+      "platform": "youtube",
+      "url": "#",
+      "order": 6,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  }
+]

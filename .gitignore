@@ -1,0 +1,422 @@
+# ============================================
+# PYTHON / DJANGO
+# ============================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+/media
+/staticfiles
+/static
+
+# Django migrations (à décommenter si besoin)
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# Django secret key (si généré localement)
+secret_key.txt
+
+# ============================================
+# ENVIRONNEMENT & SECRETS
+# ============================================
+
+# Environment variables
+.env
+.env.*
+!.env.example
+.env.local
+.env.development
+.env.test
+.env.production
+.env.staging
+
+# Virtual environments
+.venv
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Secrets & credentials
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+secrets.json
+credentials.json
+service-account.json
+
+# ============================================
+# NEXT.JS / REACT
+# ============================================
+
+# Next.js build output
+.next/
+out/
+build/
+
+# Next.js cache
+.next/cache/
+
+# Vercel
+.vercel
+.vercel.json
+
+# Turbo
+.turbo
+
+# Production build
+dist/
+
+# ============================================
+# NODE / NPM / PNPM
+# ============================================
+
+# Dependencies
+node_modules/
+jspm_packages/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# pnpm
+.pnpm-store/
+.pnpm-debug.log
+
+# Yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# ============================================
+# TYPESCRIPT
+# ============================================
+
+*.tsbuildinfo
+next-env.d.ts
+*.d.ts.map
+
+# ============================================
+# TESTS & COVERAGE
+# ============================================
+
+# Coverage reports
+.coverage
+.coverage.*
+htmlcov/
+coverage/
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Jest
+jest-coverage/
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Unit test / coverage reports
+nosetests.xml
+coverage.xml
+*.coveragerc
+
+# Tox
+.tox/
+.nox/
+
+# ============================================
+# CELERY & REDIS
+# ============================================
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+celerybeat-schedule.db
+
+# Redis
+dump.rdb
+*.rdb
+
+# ============================================
+# DATABASE
+# ============================================
+
+# SQLite
+*.sqlite
+*.sqlite3
+*.db
+
+# PostgreSQL
+*.sql
+*.dump
+
+# Database backups
+*.backup
+backups/
+
+# ============================================
+# DOCKER
+# ============================================
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+docker-compose.override.yml
+
+# ============================================
+# IDE & EDITORS
+# ============================================
+
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains (PyCharm, WebStorm, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# ============================================
+# OS
+# ============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+.Trash-*
+
+# ============================================
+# LOGS & TEMP FILES
+# ============================================
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# ============================================
+# MEDIA & UPLOADS
+# ============================================
+
+# User uploads (décommenter si besoin de versionner)
+# /backend/media/uploads/
+# /backend/media/user_files/
+
+# Large files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+*.tar.gz
+*.rar
+
+# ============================================
+# DOCUMENTATION (GENERATED)
+# ============================================
+
+# Sphinx documentation
+docs/_build/
+docs/.doctrees/
+
+# MkDocs
+site/
+
+# API documentation (auto-generated)
+api-docs/
+
+# ============================================
+# MONITORING & ANALYTICS
+# ============================================
+
+# Sentry
+.sentryclirc
+
+# Monitoring
+*.trace
+
+# ============================================
+# CI/CD
+# ============================================
+
+# GitHub Actions
+.github/workflows/*.log
+
+# ============================================
+# MISC
+# ============================================
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# SageMath
+*.sage.py
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# pytype
+.pytype/
+
+# Cython
+cython_debug/
+
+# ============================================
+# PROJECT SPECIFIC
+# ============================================
+
+# Documentation temporaire (à supprimer après validation)
+DOCUMENTATION-*.md
+README-DOCUMENTATION.md
+
+# Fichiers de test locaux
+test-*.py
+test-*.ts
+test-*.tsx
+
+# Dumps & exports
+*.dump
+exports/
+
+# Local configuration overrides
+local_config.py
+local_settings.json

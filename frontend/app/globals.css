@@ -1,0 +1,1113 @@
+@import "tailwindcss";
+
+/* ══════════════════════════════════════════════════════════════════
+   VIDA DESIGN TOKENS - CHARTE GRAPHIQUE ARCEE
+   Point central unique pour tous les styles
+   ══════════════════════════════════════════════════════════════════ */
+
+@layer base {
+  :root {
+    /* ─────────── Couleurs Primaires VIDA 2.0 (HSL) - Palette Premium ─────────── */
+    --vida-teal: 173 85% 22%;                    /* #0D5C63 - Deep Teal (principal) */
+    --vida-teal-light: 166 80% 31%;              /* #14919B - Teal Vibrant */
+    --vida-teal-dark: 173 85% 16%;               /* #094349 - Deep Teal foncé */
+    --vida-teal-ultra-dark: 173 85% 10%;         /* #052A2E - Très foncé */
+    
+    --vida-emerald: 160 84% 39%;                 /* #059669 - Emerald (accent) */
+    --vida-emerald-light: 163 72% 41%;           /* #14B8A6 - Emerald clair */
+    --vida-mint: 168 84% 58%;                    /* #34D399 - Mint (highlights) */
+    
+    --vida-accent: 24 95% 53%;                   /* #F97316 - Orange (progression, CTA) */
+    --vida-accent-light: 24 95% 63%;             /* #FB923C - Orange clair */
+    --vida-accent-soft: 24 65% 67%;              /* #E89B6E - Orange doux (indicateur actif) */
+
+    /* ─────────── Couleurs de Texte (HSL) ─────────── */
+    --vida-text-primary: 215 19% 23%;            /* #2D3748 */
+    --vida-text-secondary: 214 14% 52%;          /* #718096 */
+    --vida-text-tertiary: 214 15% 69%;           /* #A0AEC0 */
+
+    /* ─────────── Couleurs de Fond (HSL) ─────────── */
+    --vida-bg-primary: 0 0% 100%;                /* #FFFFFF */
+    --vida-bg-secondary: 210 40% 98%;            /* #F7FAFC */
+    --vida-bg-tertiary: 214 32% 95%;             /* #EDF2F7 */
+
+    /* ─────────── Couleurs Sémantiques (HSL) ─────────── */
+    --vida-success: 160 81% 39%;                 /* #10B981 */
+    --vida-success-light: 152 81% 90%;           /* #D1FAE5 */
+    --vida-success-dark: 160 84% 40%;            /* #059669 */
+    
+    --vida-error: 0 84% 60%;                     /* #EF4444 */
+    --vida-error-light: 0 93% 94%;               /* #FEE2E2 */
+    --vida-error-dark: 0 79% 63%;                /* #DC2626 */
+    
+    --vida-warning: 38 92% 50%;                  /* #F59E0B */
+    --vida-warning-light: 48 96% 89%;            /* #FEF3C7 */
+    --vida-warning-dark: 32 95% 44%;             /* #D97706 */
+    
+    --vida-info: 217 91% 60%;                    /* #3B82F6 */
+    --vida-info-light: 214 95% 93%;              /* #DBEAFE */
+    --vida-info-dark: 221 83% 53%;               /* #1D4ED8 */
+
+    /* ─────────── Échelle de Gris (HSL) ─────────── */
+    --vida-gray-50: 210 20% 98%;                 /* #F9FAFB */
+    --vida-gray-100: 214 17% 95%;                /* #F3F4F6 */
+    --vida-gray-200: 220 13% 91%;                /* #E5E7EB */
+    --vida-gray-300: 216 12% 84%;                /* #D1D5DB */
+    --vida-gray-400: 218 11% 65%;                /* #9CA3AF */
+    --vida-gray-500: 220 9% 46%;                 /* #6B7280 */
+    --vida-gray-600: 215 14% 34%;                /* #4B5563 */
+    --vida-gray-700: 217 19% 27%;                /* #374151 */
+    --vida-gray-800: 215 25% 17%;                /* #1F2937 */
+    --vida-gray-900: 220 33% 11%;                /* #111827 */
+
+    /* ─────────── Border Radius (3 niveaux) ─────────── */
+    --vida-radius-sm: 4px;
+    --vida-radius-md: 8px;
+    --vida-radius-lg: 12px;
+    --vida-radius-full: 9999px;
+
+    /* ─────────── Shadows (5 niveaux de profondeur) ─────────── */
+    --vida-shadow-1: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --vida-shadow-2: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --vida-shadow-3: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --vida-shadow-4: 0 20px 25px rgba(0, 0, 0, 0.15);
+    --vida-shadow-5: 0 25px 50px rgba(0, 0, 0, 0.25);
+
+    /* ─────────── Typographie Pro (Apple/Google Style) ─────────── */
+    --font-hero: var(--font-sora), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-heading: var(--font-jakarta), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-mono: var(--font-mono), 'IBM Plex Mono', Consolas, Monaco, 'Andale Mono', monospace;
+    
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Letter Spacing */
+    --letter-spacing-tight: -0.02em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.025em;
+
+    /* ─────────── Transitions ─────────── */
+    --vida-transition-fast: 150ms ease;
+    --vida-transition-base: 200ms ease;
+    --vida-transition-slow: 300ms ease;
+
+    /* ─────────── Glassmorphism ─────────── */
+    --vida-glass-bg: rgba(255, 255, 255, 0.8);
+    --vida-glass-blur: blur(10px);
+    --vida-glass-border: rgba(255, 255, 255, 0.2);
+
+    /* ─────────── Grain Texture ─────────── */
+    --vida-grain-opacity: 0.15;
+
+    /* ─────────── Effets 3D Subtils ─────────── */
+    --vida-perspective: 1000px;
+    --vida-perspective-light: 1500px;
+    --vida-perspective-strong: 800px;
+    
+    --vida-depth-sm: 20px;
+    --vida-depth-md: 40px;
+    --vida-depth-lg: 60px;
+    
+    --vida-rotate-subtle: 2deg;
+    --vida-rotate-moderate: 5deg;
+    --vida-rotate-strong: 8deg;
+
+    /* ═══════════ Mapping shadcn/ui - Monochrome ═══════════ */
+    --background: var(--vida-bg-primary);
+    --foreground: var(--vida-text-primary);
+    --card: var(--vida-bg-primary);
+    --card-foreground: var(--vida-text-primary);
+    --primary: var(--vida-teal);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--vida-gray-200);           /* Gris au lieu d'orange */
+    --secondary-foreground: var(--vida-text-primary);
+    --muted: var(--vida-bg-tertiary);
+    --muted-foreground: var(--vida-text-secondary);
+    --destructive: var(--vida-error);
+    --destructive-foreground: 0 0% 100%;
+    --border: var(--vida-gray-200);
+    --input: var(--vida-gray-300);
+    --ring: var(--vida-teal);
+    --radius: var(--vida-radius-sm);
+  }
+
+  /* ══════════════════════════════════════════════════════════════════
+     TYPOGRAPHIE PRO - Inter + IBM Plex Mono
+     Style Apple/Google/Stripe
+     ══════════════════════════════════════════════════════════════════ */
+
+  /* Corps de base */
+  html {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-size: clamp(0.9375rem, 1.8vw, 1rem); /* 15px mobile, 16px desktop */
+    font-weight: var(--font-weight-normal);
+    color: hsl(var(--vida-text-primary));
+    letter-spacing: var(--letter-spacing-normal);
+  }
+
+  /* Titres - Hiérarchie Premium */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-tight);
+    line-height: 1.2;
+    color: hsl(var(--vida-text-primary));
+  }
+
+  /* Hero Titles - Impact Maximum */
+  .hero-title,
+  .display-title {
+    font-family: var(--font-hero);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+    font-weight: 600;
+  }
+
+  /* Paragraphes */
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  /* Code / Monospace */
+  code, pre, kbd, samp {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+  }
+
+  /* Liens */
+  a {
+    color: hsl(var(--vida-teal));
+    text-decoration: none;
+    transition: color var(--vida-transition-fast), transform var(--vida-transition-fast);
+  }
+
+  a:hover {
+    color: hsl(var(--vida-teal-dark));
+  }
+
+  /* Liens interactifs avec flèche ou icône */
+  a.interactive-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap var(--vida-transition-base), color var(--vida-transition-fast);
+  }
+
+  a.interactive-link:hover {
+    gap: 0.75rem;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   THEME TAILWIND - EXTENSION TOKENS VIDA
+   ══════════════════════════════════════════════════════════════════ */
+
+@theme inline {
+  /* Couleurs VIDA 2.0 - Palette Premium */
+  --color-vida-teal: hsl(var(--vida-teal));
+  --color-vida-teal-light: hsl(var(--vida-teal-light));
+  --color-vida-teal-dark: hsl(var(--vida-teal-dark));
+  --color-vida-teal-ultra-dark: hsl(var(--vida-teal-ultra-dark));
+  --color-vida-emerald: hsl(var(--vida-emerald));
+  --color-vida-emerald-light: hsl(var(--vida-emerald-light));
+  --color-vida-mint: hsl(var(--vida-mint));
+  --color-vida-accent: hsl(var(--vida-accent));
+  --color-vida-accent-light: hsl(var(--vida-accent-light));
+  --color-vida-accent-soft: hsl(var(--vida-accent-soft));
+  
+  /* Texte */
+  --color-text-primary: hsl(var(--vida-text-primary));
+  --color-text-secondary: hsl(var(--vida-text-secondary));
+  --color-text-tertiary: hsl(var(--vida-text-tertiary));
+  
+  /* Fond */
+  --color-bg-primary: hsl(var(--vida-bg-primary));
+  --color-bg-secondary: hsl(var(--vida-bg-secondary));
+  --color-bg-tertiary: hsl(var(--vida-bg-tertiary));
+  
+  /* Sémantiques */
+  --color-success: hsl(var(--vida-success));
+  --color-success-light: hsl(var(--vida-success-light));
+  --color-error: hsl(var(--vida-error));
+  --color-error-light: hsl(var(--vida-error-light));
+  --color-warning: hsl(var(--vida-warning));
+  --color-warning-light: hsl(var(--vida-warning-light));
+  --color-info: hsl(var(--vida-info));
+  --color-info-light: hsl(var(--vida-info-light));
+  
+  /* Gris */
+  --color-gray-50: hsl(var(--vida-gray-50));
+  --color-gray-100: hsl(var(--vida-gray-100));
+  --color-gray-200: hsl(var(--vida-gray-200));
+  --color-gray-300: hsl(var(--vida-gray-300));
+  --color-gray-400: hsl(var(--vida-gray-400));
+  --color-gray-500: hsl(var(--vida-gray-500));
+  --color-gray-600: hsl(var(--vida-gray-600));
+  --color-gray-700: hsl(var(--vida-gray-700));
+  --color-gray-800: hsl(var(--vida-gray-800));
+  --color-gray-900: hsl(var(--vida-gray-900));
+  
+  /* Shadows */
+  --shadow-vida-1: var(--vida-shadow-1);
+  --shadow-vida-2: var(--vida-shadow-2);
+  --shadow-vida-3: var(--vida-shadow-3);
+  --shadow-vida-4: var(--vida-shadow-4);
+  --shadow-vida-5: var(--vida-shadow-5);
+  
+  /* Border Radius */
+  --radius-vida-sm: var(--vida-radius-sm);
+  --radius-vida-md: var(--vida-radius-md);
+  --radius-vida-lg: var(--vida-radius-lg);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   GRAIN SUBTIL OBLIGATOIRE (15% opacité)
+   ══════════════════════════════════════════════════════════════════ */
+
+@layer utilities {
+  .vida-grain {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vida-grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: var(--vida-grain-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .vida-grain > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Grain très visible pour sections */
+  .vida-grain-strong {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vida-grain-strong::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.35;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .vida-grain-strong > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ═══════════ Custom Select/Dropdown Styles ═══════════ */
+  /* Force le style personnalisé sur tous les navigateurs */
+  select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+  }
+
+  /* Supprime la flèche native sur IE */
+  select::-ms-expand {
+    display: none !important;
+  }
+
+  /* Supprime la flèche native sur Firefox */
+  select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
+
+  /* Style pour les options du dropdown */
+  select option {
+    background-color: white;
+    color: #374151;
+    padding: 8px 12px;
+  }
+
+  select option:hover {
+    background-color: #F3F4F6;
+  }
+
+  /* Force le style sur les selects dans les composants admin */
+  .admin-dropdown select,
+  select[class*="bg-white"] {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666666' d='M6 9L1 4h10z'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 8px center !important;
+    background-size: 12px 12px !important;
+    padding-right: 32px !important;
+  }
+
+  /* Effet Verre Poli (Glassmorphism visuel) */
+  .glass-effect {
+    position: relative;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(250, 250, 250, 0.9) 50%,
+      rgba(255, 255, 255, 0.95) 100%
+    );
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 
+      0 4px 30px rgba(0, 0, 0, 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+  }
+
+  .glass-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.8) 20%,
+      rgba(255, 255, 255, 0.9) 50%,
+      rgba(255, 255, 255, 0.8) 80%,
+      transparent 100%
+    );
+  }
+
+  /* Glassmorphism */
+  .vida-glass {
+    background: var(--vida-glass-bg);
+    backdrop-filter: var(--vida-glass-blur);
+    -webkit-backdrop-filter: var(--vida-glass-blur);
+    border-color: var(--vida-glass-border);
+  }
+
+  /* Effets 3D Subtils */
+  .vida-3d-container {
+    perspective: var(--vida-perspective);
+    perspective-origin: center;
+  }
+
+  .vida-3d-card {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .vida-3d-card:hover {
+    transform: translateZ(var(--vida-depth-sm)) rotateX(var(--vida-rotate-subtle)) rotateY(var(--vida-rotate-subtle));
+    box-shadow: var(--vida-shadow-3);
+  }
+
+  .vida-3d-button {
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .vida-3d-button:hover {
+    transform: translateZ(10px) rotateX(-2deg) scale(1.02);
+    box-shadow: var(--vida-shadow-2);
+  }
+
+  .vida-3d-button:active {
+    transform: translateZ(0) scale(0.98);
+    box-shadow: var(--vida-shadow-1);
+  }
+
+  /* Animation de pulsation pour indicateur actif */
+  @keyframes vida-pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.15);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes vida-ring-pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  .vida-pulse {
+    animation: vida-pulse 2s ease-in-out infinite;
+  }
+
+  .vida-ring-pulse::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 2px solid currentColor;
+    border-radius: 9999px;
+    animation: vida-ring-pulse 2s ease-out infinite;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   STYLES GLOBAUX COMPLÉMENTAIRES
+   ══════════════════════════════════════════════════════════════════ */
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Curseur pointer sur éléments interactifs */
+  button,
+  a,
+  [role="button"],
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  select {
+    cursor: pointer;
+  }
+
+  button {
+    user-select: none;
+  }
+
+  /* Retirer le focus par défaut du navigateur (noir) */
+  input:focus,
+  textarea:focus,
+  select:focus,
+  button:focus {
+    outline: none;
+  }
+
+  /* Focus visible personnalisé (vert/teal uniquement) */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--vida-teal));
+    outline-offset: 2px;
+  }
+  
+  /* Focus pour inputs et textareas - ring vert uniquement */
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: none;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   CLASSES UTILITAIRES TYPOGRAPHIQUES
+   ══════════════════════════════════════════════════════════════════ */
+
+@layer utilities {
+  /* Boutons primaires - Medium + Uppercase */
+  .btn-text {
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    font-size: 0.875rem;
+  }
+
+  /* Texte technique / Code */
+  .text-mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Classes de police */
+  .font-hero {
+    font-family: var(--font-hero);
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-sans);
+  }
+
+  /* Micro-interaction : transition de poids */
+  .font-transition {
+    transition: font-weight 0.2s ease;
+  }
+
+  /* Style titre moderne */
+  .text-display {
+    font-family: var(--font-hero);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+
+  /* ═══════════ Effets Hover Uniformes ═══════════ */
+  
+  /* Effet hover subtil avec élévation */
+  .hover-lift {
+    transition: transform 0.08s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.08s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--vida-shadow-2);
+  }
+
+  /* Effet hover avec scale léger */
+  .hover-scale {
+    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.015);
+  }
+
+  /* Effet hover complet (lift + scale) */
+  .hover-elevate {
+    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-elevate:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: var(--vida-shadow-3);
+  }
+
+  /* Effet hover pour cartes */
+  .hover-card {
+    transition: transform 0.12s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-card:hover {
+    transform: translateY(-6px) scale(1.015);
+    box-shadow: var(--vida-shadow-4);
+  }
+
+  /* Effet de glow au hover */
+  .hover-glow {
+    transition: box-shadow 0.1s ease-out;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(13, 92, 99, 0.3);
+  }
+
+  /* Effet hover pour liens avec flèche */
+  .hover-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.1s cubic-bezier(0.4, 0, 0.2, 1), color 0.08s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-arrow:hover {
+    gap: 0.75rem;
+  }
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   ANIMATIONS CSS OPTIMISÉES (GPU-accelerated)
+   ══════════════════════════════════════════════════════════════════ */
+
+@layer utilities {
+  /* Ken Burns effect pour HeroSlider */
+  .ken-burns {
+    animation: ken-burns 8s ease-out forwards;
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  @keyframes ken-burns {
+    0% {
+      transform: scale(1) translateZ(0);
+    }
+    100% {
+      transform: scale(1.15) translateZ(0);
+    }
+  }
+
+  /* Scanner rotation pour Eye Scanner */
+  .scanner-rotate {
+    animation: scanner-rotate 8s linear forwards;
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  @keyframes scanner-rotate {
+    0% {
+      transform: rotate(0deg) translateZ(0);
+    }
+    100% {
+      transform: rotate(360deg) translateZ(0);
+    }
+  }
+
+  /* Fade in up pour sections */
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
+    will-change: opacity, transform;
+  }
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) translateZ(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) translateZ(0);
+    }
+  }
+
+  /* Scroll indicator bounce animation */
+  @keyframes scroll-bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8px);
+    }
+  }
+
+  @keyframes scroll-glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 0px transparent);
+      opacity: 0.4;
+    }
+    50% {
+      filter: drop-shadow(0 0 8px #F97316) drop-shadow(0 0 16px #F97316);
+      opacity: 1;
+    }
+  }
+
+  .scroll-bounce {
+    animation: scroll-bounce 2s ease-in-out infinite;
+  }
+
+  .scroll-glow {
+    animation: scroll-glow 1.5s ease-in-out infinite;
+  }
+
+  /* Service cards hover optimisé */
+  .service-card {
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+    transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .service-card:hover {
+    transform: translateY(-6px) scale(1.015) translateZ(0);
+    box-shadow: var(--vida-shadow-4);
+  }
+
+  /* Reason cards hover optimisé */
+  .reason-card {
+    will-change: box-shadow;
+    transform: translateZ(0);
+  }
+
+  /* Optimisation globale pour éléments animés */
+  .service-card,
+  .reason-card,
+  .ken-burns,
+  .scanner-rotate {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Containment pour sections (isolation de layout) */
+  section {
+    contain: layout style paint;
+  }
+
+  /* ═══════════ GPU Acceleration ═══════════ */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  /* ═══════════ Glass Overlay pour Background ═══════════ */
+  .glass-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.85) 0%,
+      rgba(255, 255, 255, 0.75) 50%,
+      rgba(255, 255, 255, 0.85) 100%
+    );
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+  }
+
+  /* ═══════════ Hero Ken Burns Animation ═══════════ */
+  .hero-ken-burns {
+    animation: hero-ken-burns 8s ease-out forwards;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  @keyframes hero-ken-burns {
+    0% {
+      transform: scale(1) translateZ(0);
+    }
+    100% {
+      transform: scale(1.08) translateZ(0);
+    }
+  }
+
+  /* ═══════════ Hero Overlay Gradient ═══════════ */
+  .hero-overlay {
+    background: linear-gradient(
+      to right,
+      rgba(13, 92, 99, 0.8) 0%,
+      rgba(13, 92, 99, 0.5) 35%,
+      rgba(13, 92, 99, 0.2) 60%,
+      transparent 100%
+    );
+  }
+
+  /* ═══════════ Hero Content Animation ═══════════ */
+  .hero-content-animate {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .hero-content-animate.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* ═══════════ Section Indicator Ping ═══════════ */
+  .indicator-ping {
+    animation: indicator-ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes indicator-ping {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    75%, 100% {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+  /* ═══════════ Scrollbar Hide ═══════════ */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
+
+  /* ═══════════ HIDE ALL SCROLLBARS GLOBALLY ═══════════ */
+  * {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  *::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   OPTIMISATIONS FRAMER MOTION (GPU-ACCELERATED)
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Force GPU acceleration pour éléments Framer Motion */
+[data-framer-motion] {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Optimisation pour cartes hover */
+.group:hover {
+  will-change: transform;
+}
+
+/* Smooth scroll pour ancres */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect prefers-reduced-motion (Accessibilité) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+  
+  /* Désactiver Framer Motion animations */
+  [data-framer-motion] {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   SKELETON LOADING (SHIMMER EFFECT)
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Skeleton base */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e0e0e0 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Skeleton variants */
+.skeleton-text {
+  height: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.skeleton-title {
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skeleton-circle {
+  border-radius: 50%;
+}
+
+.skeleton-card {
+  height: 200px;
+  border-radius: 8px;
+}
+
+/* Optimisation performance */
+.skeleton {
+  will-change: background-position;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+    background: #f0f0f0;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   GLASSMORPHISM NATUREL (Effet Verre Poli)
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Effet verre poli pour sections transparentes */
+#a-propos,
+#cta {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.03) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(8px) saturate(200%);
+  -webkit-backdrop-filter: blur(8px) saturate(200%);
+}
+
+/* Reflet subtil en haut (effet verre) */
+#a-propos::before,
+#cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 20%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.3) 80%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Ombre douce en bas (profondeur) */
+#a-propos::after,
+#cta::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.03) 20%,
+    rgba(0, 0, 0, 0.05) 50%,
+    rgba(0, 0, 0, 0.03) 80%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   SERVICE DETAILS DROPDOWN (Glassmorphism)
+   ══════════════════════════════════════════════════════════════════ */
+
+.service-details-dropdown {
+  position: relative;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background 0.15s ease;
+}
+
+.service-details-dropdown:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Reflet subtil en haut (effet verre) - Supprimé pour correspondre aux cartes */
+.service-details-dropdown::before {
+  display: none;
+}
+
+/* Ombre douce en bas (profondeur) - Supprimé pour correspondre aux cartes */
+.service-details-dropdown::after {
+  display: none;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   CUSTOM SCROLLBAR - Table of Contents
+   ══════════════════════════════════════════════════════════════════ */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--vida-teal) / 0.3) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--vida-teal) / 0.3);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--vida-teal) / 0.5);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   SKELETON SHIMMER ANIMATION (Shimmer + Pulse)
+   ══════════════════════════════════════════════════════════════════ */
+
+@layer utilities {
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+}

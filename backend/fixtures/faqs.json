@@ -1,0 +1,74 @@
+[
+  {
+    "model": "content_management.faq",
+    "pk": 1,
+    "fields": {
+      "question": "Quels sont vos horaires d'ouverture ?",
+      "answer": "Nous sommes ouverts du lundi au vendredi de 8h30 à 17h00 avec une pause de 12h30 à 14h00, et le samedi de 8h00 à 12h30. Fermé le dimanche.",
+      "order": 1,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.faq",
+    "pk": 2,
+    "fields": {
+      "question": "Comment prendre rendez-vous ?",
+      "answer": "Vous pouvez prendre rendez-vous en ligne via notre site web, par téléphone au 06 693 47 35 ou 05 745 36 88, ou via WhatsApp au +242 06 693 47 35.",
+      "order": 2,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.faq",
+    "pk": 3,
+    "fields": {
+      "question": "Quels sont les tarifs des consultations ?",
+      "answer": "La consultation générale coûte 15 000 FCFA et la consultation spécialisée 25 000 FCFA. Les tarifs des autres services sont disponibles sur demande.",
+      "order": 3,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.faq",
+    "pk": 4,
+    "fields": {
+      "question": "Acceptez-vous les urgences ?",
+      "answer": "Oui, nous acceptons les urgences ophtalmologiques pendant nos heures d'ouverture. Pour les urgences en dehors de ces heures, veuillez contacter notre numéro d'urgence.",
+      "order": 4,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.faq",
+    "pk": 5,
+    "fields": {
+      "question": "Proposez-vous des examens de dépistage ?",
+      "answer": "Oui, nous proposons des dépistages pour le glaucome, la cataracte, la rétinopathie diabétique et la DMLA. Ces examens permettent une détection précoce des maladies oculaires.",
+      "order": 5,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "content_management.faq",
+    "pk": 6,
+    "fields": {
+      "question": "Où êtes-vous situés ?",
+      "answer": "Nous sommes situés au 08 Bis rue Mboko, Moungali, au Croisement Lenine - Maya-Maya à Brazzaville, Congo.",
+      "order": 6,
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  }
+]

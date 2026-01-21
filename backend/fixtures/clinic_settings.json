@@ -1,0 +1,25 @@
+[
+  {
+    "model": "content_management.clinicsetting",
+    "pk": 1,
+    "fields": {
+      "name": "Centre Médical VIDA",
+      "address": "08 Bis rue Mboko, Moungali\nBrazzaville, Congo",
+      "phone_primary": "06 569 12 35",
+      "phone_secondary": "05 745 36 88",
+      "whatsapp": "+242066934735",
+      "email": "centremedvida@gmail.com",
+      "fee_general": "15000",
+      "fee_specialized": "25000",
+      "opening_hours": {
+        "lun-ven": "08h30 - 17h00",
+        "pause": "12h30 - 14h00",
+        "sam": "08h00 - 12h30",
+        "dim": "Fermé"
+      },
+      "about_text": "Centre ophtalmologique situé à Brazzaville, nous mettons notre expertise au service de votre santé visuelle. Notre équipe vous accueille dans un environnement professionnel et vous accompagne avec attention, de la consultation au suivi de vos soins.",
+      "rccm": "B13-0506",
+      "niu": "M2300009961883"
+    }
+  }
+]
